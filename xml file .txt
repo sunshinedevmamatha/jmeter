@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite">
+
+    <parameter name="TestApplication" value="Semarchy"/>
+    <parameter name="TestEnvironment" value="Test"/>
+
+    <listeners>
+        <listener class-name="dentsu.Semarchy.fileutility.listenerutility.TestListenerHelper"/>
+    </listeners>
+    
+     <test name="SEMARCHY_Client Creation">
+        <parameter name="Browser" value="Chrome"/>
+        <classes>
+          	
+          	 <class name="dentsu.platform.testsuite.Semarchy.CreateClient"/> 
+<!--            </class>  -->
+        </classes>
+    </test>
+
+    <test name="SEMARCHY_ManagerValidation">
+        <parameter name="Browser" value="Chrome"/>
+        <classes>
+          	
+          	 <class name="dentsu.platform.testsuite.Semarchy.ValidateByMgr"/> 
+<!--            </class>  -->
+        </classes>
+    </test>
+    
+    <test name="SEMARCHY_NegativeScenario">
+        <parameter name="Browser" value="Chrome"/>
+        <classes>
+       <class name="dentsu.platform.testsuite.Semarchy.CreateClient_NegativeScenario"/> 
+<!--            </class>  -->
+        </classes>
+    </test>
+        
+</suite>
